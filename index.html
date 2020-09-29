@@ -65,6 +65,7 @@
                     </a>
                 </div>
             </div>
+
             <!-- We are Design ITUS -->
             <div style="text-align: center; padding-top: 40vh;">
                 <div class="sub-title-2">We are</div>
@@ -72,6 +73,44 @@
                 <div class="sub-title-2"><b>ACADEMIC CLUB</b> FROM FACULTY OF</div>
                 <div class="sub-title-2"><b>I</b>NFORMATION <b>T</b>ECHNOLOGY, <b>U</b>NIVERSITY OF <b>S</b>CIENCE</div>
             </div>
+
+
+
+
+            <!-- Test -->
+            <a class="video-play-button" onclick="openNav()">
+                <span></span>
+            </a>
+
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                    <video id="video1" height="80%">
+                        <source src="assets/DesignITUSIntroduction.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                </div>
+            </div>
+            <script>
+                var myVideo = document.getElementById("video1");
+                function playPause() {
+                    if (myVideo.paused)
+                        myVideo.play();
+                    else
+                        myVideo.pause();
+                }
+                function openNav() {
+                    document.getElementById("myNav").style.width = "100%";
+                    playPause();
+                }
+                function closeNav() {
+                    document.getElementById("myNav").style.width = "0%";
+                    playPause();
+                }
+            </script>
+
+
+
             <!-- We do -->
             <div style="text-align: center; padding-top: 20vh;">
                 <div class="sub-title-2">We do</div>
