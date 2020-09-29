@@ -255,9 +255,9 @@ a:hover {
     z-index: 2;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0, 0.9);
+    background-color: rgba(0,0,0, 0.75);
     overflow-x: hidden;
-    transition: 1s ease-out;
+    transition: 0.7s ease-out;
   }
   
   .overlay-content {
