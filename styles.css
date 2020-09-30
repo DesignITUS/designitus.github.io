@@ -11,6 +11,10 @@
     --padding-top: 16px;
     --menu-height: 50px;
 
+    --section-height: 300px;
+    --section-margin: 150px;
+    --section-text-margin: 48px;
+
     --theme-color-1: rgb(248, 178, 83);
     --theme-color-2: rgb(62, 150, 198);
 }
@@ -34,7 +38,7 @@ a {
 }
 a:hover {
     color: black;
-    border-bottom: rgb(201, 201, 201) 1.5px dotted;
+    /* border-bottom: rgb(201, 201, 201) 1.5px dotted; */
     
 }
 
@@ -42,12 +46,13 @@ a:hover {
 
 .big-title {
     font-size: 64px;
-    font-weight: 700;
+    font-weight: 800;
 }
 .sub-title {
-    font-size: 18px;
-    font-weight: 200;
-    letter-spacing: 6.0;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 5.0;
+    line-height: 1.6;
 }
 .sub-title-2 {
     font-size: 18px;
@@ -76,8 +81,48 @@ a:hover {
 }
 
 
+.header-rectangle {
+  position: absolute;
+  z-index: -1;
+  right: 0%; 
+  height: 60vh; 
+  width: 50vw; 
+  background-color: rgb(224, 224, 224);
+}
+@media only screen and (max-width: 768px) {
+  .header-rectangle {display: none;}
+}
+
+.t3d {
+  transform: perspective(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) ;
+  transition: all 3s ease;
+}
+.t3d:hover {
+  transform: perspective(1000px) translateZ(50px) rotateX(0deg) rotateY(0deg);
+}
+
+.t3d-quick {
+  transform: perspective(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) ;
+  transition: all 1s ease;
+}
+.t3d-quick:hover {
+  transform: perspective(1000px) translateZ(100px) rotateX(0deg) rotateY(0deg);
+}
 
 
+.graphic-design {
+  background-color: turquoise;
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: all 1s ease;
+}
+.graphic-design.effect {
+  top: 100px;
+  left: 100px;
+}
 
 
 
@@ -113,13 +158,13 @@ a:hover {
 }
 /* ------------------------ Custom Scroll Bar ------------------------- */
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
 }
 ::-webkit-scrollbar-track {
     background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-    background: rgb(248, 248, 248); 
+    background: rgb(233, 233, 233); 
 }
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(75, 75, 75); 
@@ -176,7 +221,7 @@ a:hover {
     width: 32px;
     height: 44px;
     /* background: #fa183d; */
-    border-radius: 50%;
+    /* border-radius: 50%; */
     padding: 18px 20px 18px 28px;
     cursor: pointer;
   }
@@ -192,7 +237,7 @@ a:hover {
     display: block;
     width: 80px;
     height: 80px;
-    background: #ba1f24;
+    background: var(--theme-color-2);
     border-radius: 50%;
     -webkit-animation: pulse-border 1500ms ease-out infinite;
             animation: pulse-border 1500ms ease-out infinite;
@@ -209,7 +254,7 @@ a:hover {
     display: block;
     width: 80px;
     height: 80px;
-    background: #fa183d;
+    background: var(--theme-color-2);
     border-radius: 50%;
     -webkit-transition: all 200ms;
     transition: all 300ms ease;
@@ -218,16 +263,14 @@ a:hover {
   .video-play-button span {
     display: block;
     position: relative;
-    z-index: 3;
-    width: 0;
-    height: 0;
+    z-index: 2;
     border-left: 32px solid #fff;
     border-top: 22px solid transparent;
     border-bottom: 22px solid transparent;
   }
 
   .video-play-button:hover:after {
-    background: #e20429;
+    background: var(--theme-color-1);
     width: 100px;
     height: 100px;
   }
@@ -299,3 +342,12 @@ a:hover {
     right: 24px;
     font-size: 60px;
   }
+
+
+
+
+
+
+
+
+

@@ -15,9 +15,20 @@
 
     <link rel="stylesheet" href="/styles.css">
     <script src="/scripts.js"></script>
+
+    <!-- To use jquery to remove a block of html code that generate the overlay of the video... bruh... -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
+
+    <script>
+        AOS.init();
+    </script>
 
     <div class="row">
         <div class="col-2" style="color: transparent;">.</div>
@@ -42,56 +53,61 @@
                     </div>
                 </div>
             </div>
-            <div style="height: 12vh;"></div>
-            <!-- The header rectangle -->
-            <div
-                style="position: absolute; z-index: -1; right: 16%; height: 60vh; width: 54vw; background-color: rgb(224, 224, 224);">
-            </div>
-            <!-- Header -->
-            <div class="row" style="padding-top: 12vh;">
-                <div class="col-10">
-                    <div style="height: 6px; width: 72px; background-color: var(--theme-color-1);"></div>
-                    <div class="big-title">CREATIVITY</div>
-                    <div>
-                        <div class="big-title" style="float: left; font-weight: 300;">IS A&nbsp;</div>
-                        <div class="big-title" style="float: left;">DRUG</div>
-                        <div class="big-title" style="color: var(--theme-color-2);">.</div>
-                    </div><br>
-                    <div class="sub-title">CROP YOUR BRAIN AND MAKE IT MORE BEAUTIFUL</div>
+            <div style="height: 80px;"></div>
+            <div class="t3d">
+                <!-- The header rectangle -->
+                <div class="header-rectangle">
+                    <img src="assets/VideoPreview.png" width="100%">
                 </div>
+                <!-- Header -->
+                <div class="row" style="padding-top: 100px;">
+                    <div class="col-10 t3d-quick">
+                        <div style="height: 6px; width: 72px; background-color: var(--theme-color-1);"></div>
+                        <div class="big-title">CREATIVITY</div>
+                        <div>
+                            <div class="big-title" style="float: left; font-weight: 300;">IS A&nbsp;</div>
+                            <div class="big-title" style="float: left;">DRUG</div>
+                            <div class="big-title" style="color: var(--theme-color-2);">.</div>
+                        </div><br>
+                        <div class="sub-title">CROP YOUR BRAIN AND</div>
+                        <div class="sub-title">MAKE IT MORE BEAUTIFUL</div>
+                    </div>
 
-                <div class="col-2">
-                    <!-- Video -->
-                    <a class="video-play-button" onclick="openNav()" style="position: relative; top: 10vh;">
-                        <span></span>
-                    </a>
-                    <div id="myNav" class="overlay">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <div class="overlay-content">
-                            <div style="padding:0 0 0 0;position:relative;">
-                                <iframe
-                                    src="https://player.vimeo.com/video/462956848?color=ffffff&title=0&byline=0&portrait=0"
-                                    style="position: relative;top:0;left:0;width:140vh;height:80vh; border-radius: 24px;"
-                                    frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-                                </iframe>
-                            </div>
-                            <script src="https://player.vimeo.com/api/player.js"></script>
-
-                            <!-- <video id="video1" height="80%">
-                        <source src="assets/DesignITUSIntroduction.mp4" type="video/mp4">
-                        Your browser does not support HTML video.
-                    </video> -->
-                        </div>
+                    <div class="col-2 t3d-quick">
+                        <!-- Video Play Button -->
+                        <a class="video-play-button" onclick="openNav()" style="position: relative; top: 72px;">
+                            <span></span>
+                        </a>
                     </div>
                 </div>
             </div>
+
+            <!-- Video -->
+            <!-- DIV to add the overlay -->
+            <div id="overlay-parent"></div>
+            <!-- <div id="overlay-id" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+
+                    <div style="padding:0 0 0 0;position:relative;">
+                        <iframe
+                            src="https://player.vimeo.com/video/462956848?color=ffffff&title=0&byline=0&portrait=0"
+                            style="position: relative;top:0;left:0;width:140vh;height:80vh; border-radius: 24px;"
+                            frameborder="0" allow="autoplay; fullscreen" allowfullscreen id="video">
+                        </iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+            </div> -->
+
+
 
             <!-- Join Us Button -->
             <div class="row">
                 <div class="col-4">.</div>
                 <div class="col-4">
-                    <a href="#" style="position: relative; top: 30vh;">
-                        <div class="button">JOIN US</div>
+                    <a href="#">
+                        <div class="button" style="margin-top: 300px;">JOIN US</div>
                     </a>
                 </div>
                 <div class="col-4">.</div>
@@ -99,7 +115,7 @@
 
 
             <!-- We are Design ITUS -->
-            <div style="text-align: center; padding-top: 40vh;">
+            <div style="text-align: center; margin-top: 120px;">
                 <div class="sub-title-2">We are</div>
                 <div class="big-title" style="padding: 24px 0;">DESIGN ITUS</div>
                 <div class="sub-title-2"><b>ACADEMIC CLUB</b> FROM FACULTY OF</div>
@@ -108,19 +124,99 @@
 
 
             <!-- We do -->
-            <div style="text-align: center; padding-top: 20vh;">
+            <div style="text-align: center; margin-top: 120px;">
                 <div class="sub-title-2">We do</div>
             </div>
+
             <!-- Graphic Design -->
-            <div class="row">
-                <div class="col-6">
-                    <div style="height: 300px; max-width: 450px; background-color: rgb(214, 214, 214);"></div>
+            <div class="row" style="margin-top: var(--section-margin); position: relative;">
+                <div>
+                    <!-- Products -->
+                    <div class="col-6" data-aos="fade-right" data-aos-duration="1300">
+                        <div
+                            style="height: var(--section-height); max-width: 100%; background-color: rgb(214, 214, 214);">
+                        </div>
+                    </div>
+                    <!-- Text -->
+                    <div class="col-6" style="text-align: right;">
+                        <div style="height: var(--section-text-margin);"></div>
+                        <div class="big-title" data-aos="fade-left" data-aos-duration="1300">GRAPHIC</div>
+                        <div class="big-title" data-aos="fade-left" data-aos-duration="1300"
+                            style="color: var(--theme-color-1); float: right;">DESIGN</div>
+                        <div class="big-title" data-aos="fade-left" data-aos-duration="1300"
+                            style="color: var(--theme-color-2);">.</div>
+                        <div class="sub-title-3" data-aos="fade-left" data-aos-duration="1300">ILLUSTRATION - POSTER -
+                            BANNER - STANDEE</div>
+                    </div>
                 </div>
-                <div class="col-6" style="text-align: right;">
-                    <div class="big-title">GRAPHIC</div>
-                    <div class="big-title" style="color: var(--theme-color-1); float: right;">DESIGN</div>
-                    <div class="big-title" style="color: var(--theme-color-2);">.</div>
-                    <div class="sub-title-3">ILLUSTRATION - POSTER - BANNER - STANDEE</div>
+            </div>
+
+            <!-- Photography -->
+            <div class="row" style="margin-top: var(--section-margin); position: relative;">
+                <div>
+                    <!-- Text -->
+                    <div class="col-6" style="text-align: left;">
+                        <div style="height: var(--section-text-margin);"></div>
+                        <div class="big-title" data-aos="fade-right" data-aos-duration="1300">PHOTO</div>
+                        <div class="big-title" data-aos="fade-right" data-aos-duration="1300"
+                            style="color: var(--theme-color-1); float: left;">GRAPHY</div>
+                        <div class="big-title" data-aos="fade-right" data-aos-duration="1300"
+                            style="color: var(--theme-color-2);">.</div>
+                        <div class="sub-title-3" data-aos="fade-right" data-aos-duration="1300">ILLUSTRATION - POSTER -
+                            BANNER - STANDEE</div>
+                    </div>
+                    <!-- Products -->
+                    <div class="col-6" data-aos="fade-left" data-aos-duration="1300">
+                        <div
+                            style="height: var(--section-height); max-width: 100%; background-color: rgb(214, 214, 214);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Editting -->
+            <div class="row" style="margin-top: var(--section-margin); position: relative;">
+                <div>
+                    <!-- Products -->
+                    <div class="col-6" data-aos="fade-right" data-aos-duration="1300">
+                        <div
+                            style="height: var(--section-height); max-width: 100%; background-color: rgb(214, 214, 214);">
+                        </div>
+                    </div>
+                    <!-- Text -->
+                    <div class="col-6" style="text-align: right;">
+                        <div style="height: var(--section-text-margin);"></div>
+                        <div class="big-title" data-aos="fade-left" data-aos-duration="1300">VIDEO</div>
+                        <div class="big-title" data-aos="fade-left" data-aos-duration="1300"
+                            style="color: var(--theme-color-1); float: right;">EDITTING</div>
+                        <div class="big-title" data-aos="fade-left" data-aos-duration="1300"
+                            style="color: var(--theme-color-2);">.</div>
+                        <div class="sub-title-3" data-aos="fade-left" data-aos-duration="1300">ILLUSTRATION - POSTER -
+                            BANNER - STANDEE</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drawing -->
+            <div class="row" style="margin-top: var(--section-margin); position: relative;">
+                <div>
+                    <!-- Text -->
+                    <div class="col-6" style="text-align: left;">
+                        <div style="height: var(--section-text-margin);"></div>
+                        <div class="big-title" data-aos="fade-right" data-aos-duration="1300">DRAW/SKETCH</div>
+                        <div class="big-title" data-aos="fade-right" data-aos-duration="1300"
+                            style="color: var(--theme-color-1); float: left;">ING</div>
+                        <div class="big-title" data-aos="fade-right" data-aos-duration="1300"
+                            style="color: var(--theme-color-2);">.</div>
+                        <div class="sub-title-3" data-aos="fade-right" data-aos-duration="1300">ILLUSTRATION - POSTER -
+                            BANNER - STANDEE</div>
+                    </div>
+                    <!-- Products -->
+                    <div class="col-6" data-aos="fade-left" data-aos-duration="1300">
+                        <div
+                            style="height: var(--section-height); max-width: 100%; background-color: rgb(214, 214, 214);">
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -129,16 +225,6 @@
         </div>
         <div class="col-2" style="color: transparent;">.</div>
     </div>
-
-    <script>
-        var myVideo = document.getElementById("video1");
-        function playPause() {
-            if (myVideo.paused)
-                myVideo.play();
-            else
-                myVideo.pause();
-        }
-    </script>
 
 </body>
 
