@@ -36,3 +36,10 @@ $(window).scroll(function () {
         $(".graphic-design").removeClass("effect")
     }
 });
+
+
+
+
+
+
+

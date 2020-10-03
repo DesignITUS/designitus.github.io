@@ -57,7 +57,7 @@
             <div class="t3d">
                 <!-- The header rectangle -->
                 <div class="header-rectangle">
-                    <img src="assets/VideoPreview.png" width="100%">
+                    <img src="assets/VideoPreview.gif" width="100%">
                 </div>
                 <!-- Header -->
                 <div class="row" style="padding-top: 100px;">
@@ -69,8 +69,8 @@
                             <div class="big-title" style="float: left;">DRUG</div>
                             <div class="big-title" style="color: var(--theme-color-2);">.</div>
                         </div><br>
-                        <div class="sub-title">CROP YOUR BRAIN AND</div>
-                        <div class="sub-title">MAKE IT MORE BEAUTIFUL</div>
+                        <div class="sub-title" style="letter-spacing: 6.0;">CROP YOUR BRAIN AND</div>
+                        <div class="sub-title" style="letter-spacing: 4.3;">MAKE IT MORE BEAUTIFUL</div>
                     </div>
 
                     <div class="col-2 t3d-quick">
@@ -180,7 +180,7 @@
                     <!-- Products -->
                     <div class="col-6" data-aos="fade-right" data-aos-duration="1300">
                         <div
-                            style="height: var(--section-height); max-width: 100%; background-color: rgb(214, 214, 214);">
+                            style="height: var(--section-height); max-height: 100%; background-color: rgb(214, 214, 214);">
                         </div>
                     </div>
                     <!-- Text -->
@@ -220,12 +220,92 @@
                 </div>
             </div>
 
-            <div style="height: 1000px;"></div>
-
         </div>
         <div class="col-2" style="color: transparent;">.</div>
     </div>
 
+    <div style="height: 100px; width: 100%; margin-top: var(--section-margin); background-color: rgb(44, 44, 44);">
+        <div class="row">
+            <div class="col-3">.</div>
+            <div class="col-6" style="color: white;">DESIGN ITUS</div>
+            <div class="col-3">.</div>
+        </div>
+    </div>
+
 </body>
+
+<!-- ---------------------- Back to top ---------------------- -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+<script type="text/javascript">
+    var scrolltotop = {
+        setting: {
+            startline: 100,
+            scrollto: 0,
+            scrollduration: 1e3,
+            fadeduration: [500, 100]
+        },
+        controlHTML: '<div style="font-size: x-large; color: grey;">&Uarr;</div>',
+        controlattrs: {
+            offsetx: 20,
+            offsety: 20
+        },
+        anchorkeyword: "#top",
+        state: {
+            isvisible: !1,
+            shouldvisible: !1
+        },
+        scrollup: function () {
+            this.cssfixedsupport || this.$control.css({
+                opacity: 0
+            });
+            var t = isNaN(this.setting.scrollto) ? this.setting.scrollto : parseInt(this.setting.scrollto);
+            t = "string" == typeof t && 1 == jQuery("#" + t).length ? jQuery("#" + t).offset().top : 0, this.$body.animate({
+                scrollTop: t
+            }, this.setting.scrollduration)
+        },
+        keepfixed: function () {
+            var t = jQuery(window),
+                o = t.scrollLeft() + t.width() - this.$control.width() - this.controlattrs.offsetx,
+                s = t.scrollTop() + t.height() - this.$control.height() - this.controlattrs.offsety;
+            this.$control.css({
+                left: o + "px",
+                top: s + "px"
+            })
+        },
+        togglecontrol: function () {
+            var t = jQuery(window).scrollTop();
+            this.cssfixedsupport || this.keepfixed(), this.state.shouldvisible = t >= this.setting.startline ? !0 : !1, this.state.shouldvisible && !this.state.isvisible ? (this.$control.stop().animate({
+                opacity: 1
+            }, this.setting.fadeduration[0]), this.state.isvisible = !0) : 0 == this.state.shouldvisible && this.state.isvisible && (this.$control.stop().animate({
+                opacity: 0
+            }, this.setting.fadeduration[1]), this.state.isvisible = !1)
+        },
+        init: function () {
+            jQuery(document).ready(function (t) {
+                var o = scrolltotop,
+                    s = document.all;
+                o.cssfixedsupport = !s || s && "CSS1Compat" == document.compatMode && window.XMLHttpRequest, o.$body = t(window.opera ? "CSS1Compat" == document.compatMode ? "html" : "body" : "html,body"), o.$control = t('<div id="topcontrol">' + o.controlHTML + "</div>").css({
+                    position: o.cssfixedsupport ? "fixed" : "absolute",
+                    bottom: o.controlattrs.offsety,
+                    right: o.controlattrs.offsetx,
+                    opacity: 0,
+                    cursor: "pointer"
+                }).attr({
+                    title: "Scroll to Top"
+                }).click(function () {
+                    return o.scrollup(), !1
+                }).appendTo("body"), document.all && !window.XMLHttpRequest && "" != o.$control.text() && o.$control.css({
+                    width: o.$control.width()
+                }), o.togglecontrol(), t('a[href="' + o.anchorkeyword + '"]').click(function () {
+                    return o.scrollup(), !1
+                }), t(window).bind("scroll resize", function (t) {
+                    o.togglecontrol()
+                })
+            })
+        }
+    };
+    scrolltotop.init(); 
+</script>
+<!-- ---------------------- /Back to top ---------------------- -->
 
 </html>

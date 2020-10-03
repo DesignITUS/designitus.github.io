@@ -21,6 +21,8 @@
 
 body {
     background-color: var(--background-color);
+    padding: 0px;
+    margin: 0px;
 }
 
 /* p {
@@ -51,7 +53,6 @@ a:hover {
 .sub-title {
     font-size: 12px;
     font-weight: 300;
-    letter-spacing: 5.0;
     line-height: 1.6;
 }
 .sub-title-2 {
@@ -85,9 +86,11 @@ a:hover {
   position: absolute;
   z-index: -1;
   right: 0%; 
-  height: 60vh; 
-  width: 50vw; 
+  /* height: 60vh;  */
+  width: 52vw; 
   background-color: rgb(224, 224, 224);
+  border-radius: 10px;
+  overflow: hidden;
 }
 @media only screen and (max-width: 768px) {
   .header-rectangle {display: none;}
@@ -95,10 +98,10 @@ a:hover {
 
 .t3d {
   transform: perspective(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) ;
-  transition: all 3s ease;
+  transition: all 4s ease;
 }
 .t3d:hover {
-  transform: perspective(1000px) translateZ(50px) rotateX(0deg) rotateY(0deg);
+  transform: perspective(1000px) translateZ(60px) rotateX(0deg) rotateY(0deg);
 }
 
 .t3d-quick {
