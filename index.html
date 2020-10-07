@@ -34,11 +34,39 @@
 
 <body>
 
-    <div class="row">
+    <!-- 
+WELCOME TO
+  ___  ___ ___ ___ ___ _  _ 
+ |   \| __/ __|_ _/ __| \| |
+ | |) | _|\__ \| | (_ | .` |
+ |___/|___|___/___\___|_|\_|                           
+  ___ _____ _   _ ___ 
+ |_ _|_   _| | | / __|
+  | |  | | | |_| \__ \
+ |___| |_|  \___/|___/
+
+What are you looking for?
+     -->
+
+    <script>
+        AOS.init();
+    </script>
+
+
+
+    <div class="row mobile-padding">
         <div class="col-2" style="color: transparent;">.</div>
         <div class="col-8">
+
+            <!-- Mobile announcement -->
+            <div class="mobile-announcement">
+                Welcome to Design ITUS!<br>
+                Our website is suggested to be viewed on a desktop screen for the best
+                experience. Thank you!
+            </div>
+
             <!-- Menu -->
-            <div class="row" style="padding-top: var(--padding-top);">
+            <div class="row" style="padding-top: var(--padding-top); ">
                 <div class="col-6">
                     <img src="assets/logo.png" style="height: var(--menu-height); image-rendering: auto; float: left;">
                     <div style="font-size: larger; font-weight: 800; letter-spacing: 1.3; padding-top: 7px;">DESIGN
@@ -47,17 +75,25 @@
                     <div style="font-size:x-small; font-weight: 400; letter-spacing: 0.4;">HCMUS -
                         ACADEMIC CLUB</div>
                 </div>
-                <div class="col-6">
+                <div style="text-align: center; padding-top: 8px;">
+                    <div class="col-1s" style="margin: 6px;">Outr Space</div>
+                    <div class="col-1s" style="margin: 6px;">Seminars</div>
+                    <div class="col-1s" style="margin: 6px;">Our Members</div>
+                    <div class="col-1s" style="margin: 6px;">Contact Us</div>
+                </div>
+
+                <!-- <div class="col-4">
                     <div class="row"
                         style="height: var(--menu-height); display: flex; align-items: center; text-align: center;">
-                        <div class="col-3">Outr Space</div>
-                        <div class="col-3">Seminars</div>
-                        <div class="col-3">Our Members</div>
-                        <div class="col-3">Contact Us</div>
+                        <div class="col-1" style="margin: 6px;">Outr Space</div>
+                        <div class="col-1" style="margin: 6px;">Seminars</div>
+                        <div class="col-1" style="margin: 6px;">Our Members</div>
+                        <div class="col-1" style="margin: 6px;">Contact Us</div>
                     </div>
-                </div>
+                </div> -->
             </div>
-            <div style="height: 80px;"></div>
+
+            <div class="h80"></div>
             <div class="t3d">
                 <!-- The header rectangle -->
                 <div class="header-rectangle">
@@ -65,9 +101,10 @@
                 </div>
                 <!-- Header -->
                 <div class="row" style="padding-top: 100px;">
+
                     <div class="col-10 t3d-quick">
                         <div style="height: 6px; width: 72px; background-color: var(--theme-color-1);"></div>
-                        <div class="big-title" style="letter-spacing: 2px;">CREATIVITY</div>
+                        <div class="big-title" style="letter-spacing: 0px;">CREATIVITY</div>
                         <div>
                             <div class="big-title" style="float: left; font-weight: 300; letter-spacing: 2px;">IS
                                 A&nbsp;</div>
@@ -78,7 +115,7 @@
                         <div class="sub-title" style="letter-spacing: 4.3;">MAKE IT MORE BEAUTIFUL</div>
                     </div>
 
-                    <div class="col-2 t3d-quick">
+                    <div class="col-2 t3d-quick mobile-none-display">
                         <!-- Video Play Button -->
                         <a class="video-play-button" onclick="openNav()" style="position: relative; top: 72px;">
                             <span></span>
@@ -139,22 +176,23 @@
 
             <!-- Graphic Design -->
             <div style="height: 100%;">
-                <div class="row" style="margin-top: var(--section-margin);">
+                <div class="row" style="margin-top: 180px;">
                     <div>
                         <!-- Products -->
                         <div class="col-6">
                             <!-- <div
                             style="height: var(--section-height); max-width: 100%; background-color: rgb(214, 214, 214);">
                         </div> -->
-                            <img src="assets/g1.png" style="width: 100%;">
+                            <img src="assets/g1.png" class="bdrds" style="width: 100%;" data-aos="fade-up">
                         </div>
                         <!-- Text -->
                         <div class="col-6" style="text-align: right;">
                             <div style="height: var(--section-text-margin);"></div>
-                            <div class="big-title">GRAPHIC</div>
-                            <div class="big-title" style="color: var(--theme-color-1); float: right;">DESIGN</div>
-                            <div class="big-title" style="color: var(--theme-color-2);">.</div>
-                            <div class="sub-title-3">ILLUSTRATIONS -
+                            <div class="big-title" data-aos="fade-right">GRAPHIC</div>
+                            <div class="big-title" data-aos="fade-right"
+                                style="color: var(--theme-color-1); float: right;">DESIGN</div>
+                            <div class="big-title" data-aos="fade-right" style="color: var(--theme-color-2);">.</div>
+                            <div class="sub-title-3" data-aos="fade-right">ILLUSTRATIONS -
                                 MULTIMEDIA PRODUCTS</div>
                         </div>
                     </div>
@@ -168,10 +206,11 @@
                         <!-- Text -->
                         <div class="col-6" style="text-align: left;">
                             <div style="height: var(--section-text-margin);"></div>
-                            <div class="big-title">PHOTO</div>
-                            <div class="big-title" style="color: var(--theme-color-1); float: left;">GRAPHY</div>
-                            <div class="big-title" style="color: var(--theme-color-2);">.</div>
-                            <div class="sub-title-3">PHOTOS HUNTING - COLOR
+                            <div class="big-title" data-aos="fade-right">PHOTO</div>
+                            <div class="big-title" data-aos="fade-right"
+                                style="color: var(--theme-color-1); float: left;">GRAPHY</div>
+                            <div class="big-title" data-aos="fade-right" style="color: var(--theme-color-2);">.</div>
+                            <div class="sub-title-3" data-aos="fade-right">PHOTOS HUNTING - COLOR
                                 BLENDING</div>
                         </div>
                         <!-- Products -->
@@ -179,30 +218,32 @@
                             <!-- <div
                             style="height: var(--section-height); max-width: 100%; background-color: rgb(214, 214, 214);">
                         </div> -->
-                            <img src="assets/p1.jpg" style="width: 100%;">
+                            <img src="assets/p1.jpg" class="bdrds" style="width: 100%;" data-aos="fade-up">
                         </div>
                     </div>
                 </div>
             </div>
 
 
-            <!-- Video Editting -->
-            <div style="height: 100%;">
+            <!-- Video Editing -->
+            <div style="height: 40%;">
                 <div class="row" style="margin-top: var(--section-margin);">
                     <div>
                         <!-- Products -->
                         <div class="col-6">
-                            <div
+                            <!-- <div
                                 style="height: var(--section-height); max-height: 100%; background-color: rgb(214, 214, 214);">
-                            </div>
+                            </div> -->
+                            <img src="assets/v1.gif" class="bdrds" style="width: 100%;" data-aos="fade-up">
                         </div>
                         <!-- Text -->
                         <div class="col-6" style="text-align: right;">
                             <div style="height: var(--section-text-margin);"></div>
-                            <div class="big-title">VIDEO</div>
-                            <div class="big-title" style="color: var(--theme-color-1); float: right;">EDITTING</div>
-                            <div class="big-title" style="color: var(--theme-color-2);">.</div>
-                            <div class="sub-title-3">VIDEO MAKING & EDITTING -
+                            <div class="big-title" data-aos="fade-right">VIDEO</div>
+                            <div class="big-title" data-aos="fade-right"
+                                style="color: var(--theme-color-1); float: right;">EDITING</div>
+                            <div class="big-title" data-aos="fade-right" style="color: var(--theme-color-2);">.</div>
+                            <div class="sub-title-3" data-aos="fade-right">VIDEO MAKING & EDITING -
                                 MOTION
                                 GRAPHIC</div>
                         </div>
@@ -217,10 +258,11 @@
                         <!-- Text -->
                         <div class="col-6" style="text-align: left;">
                             <div style="height: var(--section-text-margin);"></div>
-                            <div class="big-title">DRAW/SKETCH</div>
-                            <div class="big-title" style="color: var(--theme-color-1); float: left;">ING</div>
-                            <div class="big-title" style="color: var(--theme-color-2);">.</div>
-                            <div class="sub-title-3">HAND & DIGITAL DRAWING -
+                            <div class="big-title" data-aos="fade-right">DRAW/SKETCH</div>
+                            <div class="big-title" data-aos="fade-right"
+                                style="color: var(--theme-color-1); float: left;">ING</div>
+                            <div class="big-title" data-aos="fade-right" style="color: var(--theme-color-2);">.</div>
+                            <div class="sub-title-3" data-aos="fade-right">HAND & DIGITAL DRAWING -
                                 COMICS</div>
                         </div>
                         <!-- Products -->
@@ -228,7 +270,7 @@
                             <!-- <div
                             style="height: var(--section-height); max-width: 100%; background-color: rgb(214, 214, 214);">
                         </div> -->
-                            <img src="assets/d1.jpg" style="width: 100%;">
+                            <img src="assets/d1.jpg" class="bdrds" style="width: 100%;" data-aos="fade-up">
                         </div>
                     </div>
                 </div>
@@ -240,11 +282,54 @@
 
 
 
-    <div style="height: 100px; width: 100%; margin-top: var(--section-margin); background-color: rgb(44, 44, 44);">
+    <div style="width: 100%; margin-top: var(--section-margin); background-color: rgb(44, 44, 44); padding: 20px;">
         <div class="row">
-            <div class="col-3">.</div>
-            <div class="col-6" style="color: white;">DESIGN ITUS</div>
-            <div class="col-3">.</div>
+            <div class="col-3" style="padding: var(--footer-padding);">
+                <img src="assets/logo.png" style="width: 80%; margin: 0% 10%;">
+            </div>
+            <div class="col-3" style="color: white; padding: var(--footer-padding);">
+                <div class="footer-text" style="font-size: 20px; font-weight: 500;">
+                    ABOUT DESIGN ITUS
+                </div>
+                <div class="footer-text">
+                    <br>DESIGN ITUS club was established on October 25, 2010, is an academic club of the Faculty of
+                    Information Technology, Vietnam National University, Ho Chi Minh City, University of Science.<br>
+                    The club is a place for students with a passion for graphic design, UI/UX design, photography,
+                    photo editing, video making and editing, hand-drawing and digital painting.
+                </div>
+            </div>
+            <div class="col-3" style="color: white; padding: var(--footer-padding);">
+                <div class="footer-text" style="font-size: 20px; font-weight: 500;">
+                    CONTACT
+                </div>
+                <div class="footer-text">
+                    <br>
+                    <svg style="fill: white; position: relative; top: 4px;" xmlns="http://www.w3.org/2000/svg"
+                        width="20" height="20" viewBox="0 0 24 24">
+                        <path
+                            d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z" />
+                    </svg>
+                    Mail
+                    <br>
+                    <a href="mailto:designitus.hcmus@gmail.com" target="_blank">
+                        <div style="color: white; font-weight: 400;">designitus.hcmus@gmail.com</div>
+                    </a>
+
+                    <br>
+                    <svg style="fill: white; position: relative; top: 4px;" xmlns="http://www.w3.org/2000/svg"
+                        width="20" height="20" viewBox="0 0 24 24">
+                        <path
+                            d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+                    </svg>
+                    Facebook
+                    <br>
+                    <a href="https://www.facebook.com/design.itus" target="_blank">
+                        <div style="color: white; font-weight: 400;">fb.com/design.itus</div>
+                    </a>
+
+                </div>
+            </div>
+            <div class="col-3" style="color: white; padding: var(--footer-padding);">.</div>
         </div>
     </div>
 

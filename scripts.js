@@ -8,7 +8,7 @@ function openNav() {
             <div style="padding:0 0 0 0;position:relative;">
                 <iframe
                     src="https://player.vimeo.com/video/462956848?color=ffffff&title=0&byline=0&portrait=0"
-                    style="position: relative;top:0;left:0;width:140vh;height:80vh; border-radius: 24px;"
+                    style="position: relative;top:0;left:0;width:140vh;height:80vh; border-radius: 18px;"
                     frameborder="0" allow="autoplay; fullscreen" allowfullscreen id="video">
                 </iframe>
             </div>

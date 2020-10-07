@@ -15,6 +15,8 @@
     --section-margin: 240px;
     --section-text-margin: 48px;
 
+    --footer-padding: 20px;
+
     --theme-color-1: rgb(248, 178, 83);
     --theme-color-2: rgb(62, 150, 198);
     --theme-color-3: rgb(213, 34, 53);
@@ -24,6 +26,26 @@ body {
     background-color: var(--background-color);
     padding: 0px;
     margin: 0px;
+}
+
+.mobile-padding {
+  padding: 0px;
+} @media only screen and (max-width: 768px) {
+  .mobile-padding {padding: 20px;}
+}
+
+.mobile-announcement {
+  background-color: blanchedalmond;
+  padding: 16px;
+  display: none;
+}@media only screen and (max-width: 768px) {
+  .mobile-announcement{display: block;}
+}
+
+.mobile-none-display {
+  display: block;
+}@media only screen and (max-width: 768px) {
+  .mobile-none-display{display: none;}
 }
 
 /* p {
@@ -48,27 +70,37 @@ a:hover {
 
 
 .big-title {
-    font-size: 64px;
-    font-weight: 800;
+  font-size: 64px;
+  font-weight: 800;
+} @media only screen and (max-width: 768px) {
+  .big-title {font-size: 36px;}
 }
 .sub-title {
-    font-size: 12px;
-    font-weight: 300;
-    line-height: 1.6;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.6;
 }
 .sub-title-2 {
-    font-size: 18px;
-    font-weight: 200;
-    letter-spacing: 3.2;
-    line-height: 1.6;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 3.2;
+  line-height: 1.6;
 }
 .sub-title-3 {
-    font-size: 14px;
-    font-weight: 200;
-    letter-spacing: 2;
-    line-height: 1.6;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 2;
+  line-height: 1.6;
 }
-
+.footer-text {
+  color: white; 
+  text-align: justify;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1;
+  line-height: 1.4;
+}
 
 
 .button {
@@ -106,6 +138,17 @@ a:hover {
 }
 @media only screen and (max-width: 768px) {
   .header-rectangle {display: none;}
+}
+
+.bdrds {
+  border-radius: 6px;
+}
+
+.h80 {
+  height: 80px;
+}
+@media only screen and (max-width: 768px) {
+  .h80 {height: 0px;}
 }
 
 .t3d {
@@ -173,6 +216,7 @@ a:hover {
     .col-12 {width: 100%;}
 
     .col-20pcnt {width: 20%;}
+    .col-1s {width: 10%;}
 }
 /* ------------------------ Custom Scroll Bar ------------------------- */
 ::-webkit-scrollbar {
