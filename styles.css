@@ -12,11 +12,12 @@
     --menu-height: 50px;
 
     --section-height: 300px;
-    --section-margin: 150px;
+    --section-margin: 240px;
     --section-text-margin: 48px;
 
     --theme-color-1: rgb(248, 178, 83);
     --theme-color-2: rgb(62, 150, 198);
+    --theme-color-3: rgb(213, 34, 53);
 }
 
 body {
@@ -71,14 +72,25 @@ a:hover {
 
 
 .button {
-    background-color: var(--theme-color-1); /* Green */
-    color: white;
-    padding: 16px 42px;
-    letter-spacing: 2;
-    text-align: center;
-    /* display: inline-block; */
-    border-radius: 4px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);
+  position: relative;
+  background-color: var(--theme-color-2);
+  /* background-color: black; */
+  color: white;
+  padding: 18px 42px;
+  letter-spacing: 2;
+  /* border: 2px solid black; */
+  text-align: center;
+  /* display: inline-block; */
+  border-radius: 6px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+  left: 0px;
+  top: 0px;
+} .button:hover {
+  background-color: var(--theme-color-1);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
+  left: 0px;
+  top: -2px;
 }
 
 
@@ -126,6 +138,9 @@ a:hover {
   top: 100px;
   left: 100px;
 }
+
+
+
 
 
 
