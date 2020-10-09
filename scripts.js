@@ -37,17 +37,12 @@ $(window).scroll(function () {
     }
 });
 
+// --------------------------- Snack Bar --------------------------
+function showSnackBar() {
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+}
 
 
-
-//----------------------------- Smooth scrolling when clicking an anchor link -------------------------------
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-
+// 

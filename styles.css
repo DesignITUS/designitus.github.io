@@ -5,6 +5,7 @@
     font-size: 16px;
     color: rgb(0, 0, 0);
     /* line-height: 1.5; */
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -60,6 +61,7 @@ a {
     color: rgb(0, 0, 0);
     text-decoration: none;
     border-bottom: none;
+    cursor: pointer;
 }
 a:hover {
     color: rgb(138, 138, 138);
@@ -161,10 +163,10 @@ a:hover {
 
 .t3d-quick {
   transform: perspective(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) ;
-  transition: all 1s ease;
+  transition: all 2s ease;
 }
 .t3d-quick:hover {
-  transform: perspective(1000px) translateZ(100px) rotateX(0deg) rotateY(0deg);
+  transform: perspective(1000px) translateZ(60px) rotateX(0deg) rotateY(0deg);
 }
 
 
@@ -216,7 +218,7 @@ a:hover {
     .col-12 {width: 100%;}
 
     .col-20pcnt {width: 20%;}
-    .col-1s {width: 10%;}
+    .col-1s {width: 14%;}
 }
 /* ------------------------ Custom Scroll Bar ------------------------- */
 ::-webkit-scrollbar {
@@ -405,11 +407,47 @@ a:hover {
     font-size: 60px;
   }
 
-
-
-
-
-
-
+/* SnackBar */
+  #snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
 
 

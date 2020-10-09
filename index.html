@@ -74,8 +74,8 @@ Contact me if u want bro: quangbao.dev@gmail.com
             </div>
 
             <!-- Menu -->
-            <div class="row" style="padding-top: var(--padding-top); ">
-                <div class="col-6">
+            <div id="myTop" class="row" style="padding-top: var(--padding-top);">
+                <div class="col-5">
                     <img src="assets/logo.png" style="height: var(--menu-height); image-rendering: auto; float: left;">
                     <div style="font-size: larger; font-weight: 800; letter-spacing: 1.3; padding-top: 7px;">DESIGN
                         ITUS
@@ -84,10 +84,12 @@ Contact me if u want bro: quangbao.dev@gmail.com
                         ACADEMIC CLUB</div>
                 </div>
                 <div style="text-align: center; padding-top: 8px;">
-                    <div class="col-1s" style="margin: 6px;">Outr Space</div>
-                    <div class="col-1s" style="margin: 6px;">Seminars</div>
-                    <div class="col-1s" style="margin: 6px;">Our Members</div>
-                    <div class="col-1s" style="margin: 6px;"><a href="#footer">Contact Us</a></div>
+                    <div class="col-1s" style="margin-top: 6px;"><a onclick="showSnackBar()">Outr Space</a></div>
+                    <div class="col-1s" style="margin-top: 6px;"><a onclick="showSnackBar()">Seminars</a></div>
+                    <div class="col-1s" style="margin-top: 6px;"><a onclick="showSnackBar()">Members</a></div>
+                    <div class="col-1s" style="margin-top: 6px;"><a href="#myFooter" rel="">Contact</a></div>
+                    <!-- SnackBar -->
+                    <div id="snackbar">Will be open soon</div>
                 </div>
 
                 <!-- <div class="col-4">
@@ -157,7 +159,7 @@ Contact me if u want bro: quangbao.dev@gmail.com
                 <div class="col-4">.</div>
                 <div class="col-4">
                     <a href="#">
-                        <div class="button" style="margin-top: 300px;">JOIN US</div>
+                        <div class="button" style="margin-top: 300px;" data-aos="fade-up">JOIN US</div>
                     </a>
                 </div>
                 <div class="col-4">.</div>
@@ -166,18 +168,19 @@ Contact me if u want bro: quangbao.dev@gmail.com
 
             <!-- We are Design ITUS -->
             <div style="text-align: center; margin-top: 120px;">
-                <div class="sub-title-2">We are</div>
-                <div class="big-title" style="padding: 24px 0; letter-spacing: 2px;">
+                <div class="sub-title-2" data-aos="fade-up">We are</div>
+                <div class="big-title" style="padding: 24px 0; letter-spacing: 2px;" data-aos="fade-up">
                     DESIGN ITUS
                 </div>
-                <div class="sub-title-2"><b>ACADEMIC CLUB</b> FROM FACULTY OF</div>
-                <div class="sub-title-2"><b>I</b>NFORMATION <b>T</b>ECHNOLOGY, <b>U</b>NIVERSITY OF <b>S</b>CIENCE</div>
+                <div class="sub-title-2" data-aos="fade-up"><b>ACADEMIC CLUB</b> FROM FACULTY OF</div>
+                <div class="sub-title-2" data-aos="fade-up"><b>I</b>NFORMATION <b>T</b>ECHNOLOGY, <b>U</b>NIVERSITY OF
+                    <b>S</b>CIENCE</div>
             </div>
 
 
             <!-- We do -->
             <div style="text-align: center; margin-top: 120px;">
-                <div class="sub-title-2">We do</div>
+                <div class="sub-title-2" data-aos="fade-up">We do</div>
             </div>
 
 
@@ -290,7 +293,7 @@ Contact me if u want bro: quangbao.dev@gmail.com
 
 
 
-    <div id="footer"
+    <div id="myFooter" name="myFooter"
         style="width: 100%; margin-top: var(--section-margin); background-color: rgb(44, 44, 44); padding: 50px 20px;">
         <div class="row">
             <div class="col-3" style="padding: var(--footer-padding);">
@@ -376,13 +379,22 @@ Contact me if u want bro: quangbao.dev@gmail.com
 
         <div style="width: 100%; height: 28px;"></div>
 
-        <div class="footer-text" style="text-align: center;">© 2020 Design ITUS Academic Club. All Rights Reserved.
+        <div class="footer-text" style="text-align: center;">
+            © 2020 Design ITUS Academic Club. All Rights Reserved.
         </div>
+    </div>
+
+    <div style="position: fixed; bottom: 20px; right: 20px;" class="mobile-none-display">
+        <a href="#myTop">
+            <div style="width: 32px; height: 32px; text-align: center; font-size: 20px; color: rgb(134, 134, 134);">
+                &UpArrowBar;</div>
+        </a>
+    </div>
 
 </body>
 
 <!-- ---------------------- Back to top ---------------------- -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
 <script type="text/javascript">
     var scrolltotop = {
         setting: {
@@ -452,7 +464,7 @@ Contact me if u want bro: quangbao.dev@gmail.com
         }
     };
     scrolltotop.init(); 
-</script>
+</script> -->
 <!-- ---------------------- /Back to top ---------------------- -->
 
 </html>
