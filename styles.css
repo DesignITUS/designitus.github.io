@@ -153,6 +153,13 @@ a:hover {
   .h80 {height: 0px;}
 }
 
+.h300 {
+  height: 300px;
+}
+@media only screen and (max-width: 768px) {
+  .h300 {height: 0px;}
+}
+
 .t3d {
   transform: perspective(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) ;
   transition: all 4s ease;
